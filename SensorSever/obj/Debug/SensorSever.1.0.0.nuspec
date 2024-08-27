@@ -1,0 +1,20 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>SensorSever</id>
+    <version>1.0.0</version>
+    <authors>SensorSever</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="dddb655d1fd8652714a9a7e5296691f8188a9a03" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="SerialPort" version="1.0.0.1" exclude="Build,Analyzers" />
+        <dependency id="System.IO.Ports" version="8.0.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="D:\CprServer\GUGUmori\SensorSever\bin\Debug\net8.0\SensorSever.runtimeconfig.json" target="lib\net8.0\SensorSever.runtimeconfig.json" />
+    <file src="D:\CprServer\GUGUmori\SensorSever\bin\Debug\net8.0\SensorSever.dll" target="lib\net8.0\SensorSever.dll" />
+  </files>
+</package>

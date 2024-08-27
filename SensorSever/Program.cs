@@ -2,8 +2,32 @@
 using System.Diagnostics;
 using System.IO.Ports;
 using System.Threading;
+using SensorSever;
 
 class Pro {
+
+
+
+
+
+    public static void Main(String[] args)
+    {
+        // Pro pro = new Pro();
+        // pro.Start();
+        // pro.ReceiveThreadfunction();
+        try
+        {
+            ServerConnect serverConnect = new ServerConnect();
+            serverConnect.StartServer();
+            // 你的主程序逻辑
+        }
+        catch (Exception ex)
+        {
+            File.WriteAllText("error_log.txt", ex.ToString());
+            throw;
+        }
+
+    }
     private SerialPort sp;
     private Thread receiveThread;//用于接收消息的线程
     public string portName = "COM5";//串口名，根据Arduino中显示的串口写
@@ -54,12 +78,7 @@ class Pro {
         }
     }
 
-    public static void Main(String[] args) 
-    {
-        Pro pro = new Pro();
-        pro.Start();
-        pro.ReceiveThreadfunction();
-    }
+
     public void ReceiveThreadfunction()
     {
         //Console.WriteLine("HelloWorld");//打印
