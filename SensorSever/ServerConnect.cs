@@ -103,6 +103,9 @@ public class ServerConnect
         }
     }
 
+    /// <summary>
+    /// 服务器接收客户端消息
+    /// </summary>
     private async void StartReceiving()
     {
         byte[] buffer = new byte[1024];
@@ -173,6 +176,10 @@ public class ServerConnect
         Console.WriteLine("Server stopped.");
     }
 
+    /// <summary>
+    /// 服务端向客户端发消息
+    /// </summary>
+    /// <param name="responseMessage"></param>
     private void SendHeartbeatResponse(string responseMessage)
     {
         string response = responseMessage;
@@ -181,9 +188,12 @@ public class ServerConnect
         Console.WriteLine("Sent heartbeat response: " + response);
     }
 
+    /// <summary>
+    /// 服务端接收传感器消息
+    /// </summary>
+    /// <param name="str"></param>
     public void SensorReceiveData(string str)
     {
-        //这里调用将传感器传来的数据发送到客户端
         SendHeartbeatResponse(str);
     }
 }
