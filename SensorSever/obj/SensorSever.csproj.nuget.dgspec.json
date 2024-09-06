@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\SensorSever.csproj": {}
+    "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj": {}
   },
   "projects": {
-    "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\SensorSever.csproj": {
+    "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\SensorSever.csproj",
+        "projectUniqueName": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj",
         "projectName": "SensorSever",
-        "projectPath": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\SensorSever.csproj",
-        "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
-        "outputPath": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\obj\\",
+        "projectPath": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj",
+        "packagesPath": "C:\\Users\\new\\.nuget\\packages\\",
+        "outputPath": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Admin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\new\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.302/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

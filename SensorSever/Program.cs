@@ -6,20 +6,26 @@ using SensorSever;
 
 class Pro {
 
-
-
+    private SerialPort sp;
+    public string portName = "COM5"; // 串口名，根据Arduino中显示的串口写
+    public int baudRate = 9600; // 波特率 基本都是9600
+    public Parity parity = Parity.None; // 校验位
+    public int dataBits = 8; // 数据位
+    public StopBits stopBits = StopBits.One; // 停止位
+    public ServerConnect serverConnect;
 
 
     public static void Main(String[] args)
     {
-        // Pro pro = new Pro();
-        // pro.Start();
-        // pro.ReceiveThreadfunction();
         try
         {
-            ServerConnect serverConnect = new ServerConnect();
-            serverConnect.StartServer();
+            Pro pro = new Pro();
+            pro.serverConnect = new ServerConnect();
+            pro.serverConnect.StartServer();
             // 你的主程序逻辑
+            
+            pro.Start();
+           // Console.ReadLine(); // 保持程序运行
         }
         catch (Exception ex)
         {
@@ -28,27 +34,18 @@ class Pro {
         }
 
     }
-    private SerialPort sp;
-    private Thread receiveThread;//用于接收消息的线程
-    public string portName = "COM5";//串口名，根据Arduino中显示的串口写
-    public int baudRate = 9600;//波特率 基本都是9600
-    public Parity parity = Parity.None;//校验位
-    public int dateBits = 8;//数据位
-    public StopBits stopBits = StopBits.One;//停止位
 
     void Start()
     {
         OpenPort();
-        receiveThread = new Thread(ReceiveThreadfunction);
-        receiveThread.IsBackground = true;
-        receiveThread.Start();
     }
 
     public void OpenPort()
     {
-        //创建串口
-        sp = new SerialPort(portName, baudRate, parity, dateBits, stopBits);
-        sp.ReadTimeout = 400;
+        // 创建串口
+        sp = new SerialPort(portName, baudRate, parity, dataBits, stopBits);
+        sp.ReadTimeout = 100; // 减少读取超时时间
+        sp.DataReceived += new SerialDataReceivedEventHandler(DataReceivedHandler); // 注册数据接收事件
         try
         {
             sp.Open();
@@ -70,7 +67,6 @@ class Pro {
         try
         {
             sp.Close();
-            receiveThread.Abort();
         }
         catch (Exception ex)
         {
@@ -79,41 +75,25 @@ class Pro {
     }
 
 
-    public void ReceiveThreadfunction()
+    private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
     {
-        //Console.WriteLine("HelloWorld");//打印
-        while (true)
+        SerialPort sp = (SerialPort)sender;
+        try
         {
-            if (this.sp != null && this.sp.IsOpen)//检测端口是否开启
+            String strRec = sp.ReadLine();
+            if (strRec != null)
             {
-                try
-                {
-                    String strRec = sp.ReadLine();
-                    //Debug.Log("The number is :" + strRec);
-                    if (strRec != null)
-                    {
-                        int index = Convert.ToInt32(strRec);
-                        Console.WriteLine(index);
-                        //if (index == 90)//温湿度传感器
-                        //{
-                        //    AirSlake.Awake = true;
-                        //}
-                        //if (index == 0)//机械按键
-                        //{
-                        //    Button.Button0 = true;
-                        //}
-                        //if (index == 1)
-                        //{
-                        //    Button.Button1 = true;
-                        //    Button.Button2 = true;
-                        //}
-                    }
-                }
-                catch
-                {
-
+                int index = Convert.ToInt32(strRec.Trim());
+                if (index == 110)
+                { // 呼吸检测
+                    Console.WriteLine("1");
+                    serverConnect.SensorReceiveData("1");
                 }
             }
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine(ex.Message);
         }
     }
 }
