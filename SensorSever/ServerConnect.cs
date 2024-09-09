@@ -1,3 +1,5 @@
+using Newtonsoft.Json;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net;
@@ -36,8 +38,6 @@ public class ServerConnect
         while (true)
         {
             TcpClient client = server.AcceptTcpClient();
-            Console.WriteLine("Client connected!");
-
             // 在新线程中处理客户端通信
             new System.Threading.Thread(() => HandleClient(client)).Start();
         }
@@ -47,8 +47,8 @@ public class ServerConnect
     {
         // 异步等待客户端连接
         server.BeginAcceptTcpClient(new AsyncCallback(OnClientConnect), null);
-        //临时测试用
-        SendHeartbeatResponse("1");
+        ////临时测试用
+        //SendResponse("1");
     }
 
     void HandleClient(TcpClient client)
@@ -87,6 +87,7 @@ public class ServerConnect
             client = server.EndAcceptTcpClient(ar); // 接受客户端连接
             stream = client.GetStream();
             Console.WriteLine("Client connected!");
+            isClientConnected = true;
 
             // 启动接收消息的逻辑
             StartReceiving();
@@ -124,12 +125,16 @@ public class ServerConnect
                     if (message == "PING")
                     {
                         lastHeartbeat = DateTime.Now; // 重置心跳计时器
-                        SendHeartbeatResponse("PONG");
+                        SendResponse("PONG");
+                        
+                        //SensorReceiveData("1");
+                        //SensorReceiveData("2");
                     }
                 }
                 else
                 {
                     Console.WriteLine("Client disconnected.");
+                    isClientConnected = false;
                     client.Close();
                     break;
                 }
@@ -180,20 +185,124 @@ public class ServerConnect
     /// 服务端向客户端发消息
     /// </summary>
     /// <param name="responseMessage"></param>
-    private void SendHeartbeatResponse(string responseMessage)
+    //private void SendResponse(string responseMessage)
+    //{
+    //    string response = responseMessage;
+    //    byte[] data = Encoding.ASCII.GetBytes(response);
+    //    stream.Write(data, 0, data.Length);
+    //    Console.WriteLine("Sent heartbeat response: " + response);
+    //}
+
+    private void SendResponse(string message)
     {
-        string response = responseMessage;
-        byte[] data = Encoding.ASCII.GetBytes(response);
-        stream.Write(data, 0, data.Length);
-        Console.WriteLine("Sent heartbeat response: " + response);
+        try
+        {
+            byte[] data = Encoding.ASCII.GetBytes(message);
+
+            // 获取消息的长度，并转换成 4 字节的头部（大端字节序）
+            byte[] messageLength = BitConverter.GetBytes(IPAddress.HostToNetworkOrder(data.Length));
+
+            // 先发送消息头部，再发送消息体
+            stream.Write(messageLength, 0, messageLength.Length);
+            stream.Write(data, 0, data.Length);
+
+            Console.WriteLine("Sent message: " + message);
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine("Error sending message: " + ex.Message);
+        }
     }
+
+    #region 接收并处理传感器消息
+
+    private int artificialRespirationNum = 0;
+    private int pressNum = 0;
+    private int artificialRespirationAccNum = 2;
+    private int pressAccNum = 30;
+    private int round = 0;
 
     /// <summary>
     /// 服务端接收传感器消息
     /// </summary>
-    /// <param name="str"></param>
+    /// <param name="str">1人工呼吸，2按压</param>
     public void SensorReceiveData(string str)
     {
-        SendHeartbeatResponse(str);
+        if (!isClientConnected)
+        {
+            return;
+        }
+
+        if (round == 5)
+        {
+            return;
+        }
+
+        if (str == "1")
+        {
+            if (artificialRespirationNum < artificialRespirationAccNum)
+            {
+                artificialRespirationNum++;
+            }
+        }
+        else if (str == "2")
+        {
+            if (pressNum < pressAccNum)
+            {
+                pressNum++;
+            }
+        }
+
+        if (artificialRespirationNum == artificialRespirationAccNum && pressNum == pressAccNum)
+        {
+            round++;
+            artificialRespirationNum = 0;
+            pressNum = 0;
+            //if (round == 5)
+            //{
+            //    //5轮结束触发事件
+            //}
+        }
+        
+        Message message = new Message()
+        {
+            Code = 200,
+            Data = new MessageData()
+            {
+                Type = str,
+                ArtificialRespirationNum = artificialRespirationNum,
+                PressNum = pressNum,
+                ArtificialRespirationAccNum = artificialRespirationAccNum,
+                PressAccNum = pressAccNum,
+                Round = round,
+            }
+        };
+
+        string messageStr = JsonConvert.SerializeObject(message);
+        SendResponse(messageStr);
     }
+
+    public struct Message
+    {
+        public int Code;
+        public MessageData Data;
+    }
+
+    public struct MessageData
+    {
+        public string Type;
+        public int ArtificialRespirationNum;
+        public int PressNum;
+        public int ArtificialRespirationAccNum;
+        public int PressAccNum;
+        public int Round;
+    }
+
+    //public struct BaseMsg
+    //{
+    //    public int Header;//2
+    //    public int Header;//2
+    //}
+
+    #endregion
 }

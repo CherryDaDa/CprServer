@@ -24,3 +24,4 @@ E:\tqy\Neuedu\CprServer\SensorSever\obj\Release\net8.0\refint\SensorSever.dll
 E:\tqy\Neuedu\CprServer\SensorSever\obj\Release\net8.0\SensorSever.pdb
 E:\tqy\Neuedu\CprServer\SensorSever\obj\Release\net8.0\SensorSever.genruntimeconfig.cache
 E:\tqy\Neuedu\CprServer\SensorSever\obj\Release\net8.0\ref\SensorSever.dll
+E:\tqy\Neuedu\CprServer\SensorSever\bin\Release\net8.0\Newtonsoft.Json.dll

@@ -34,7 +34,7 @@
               "RelativeDocumentMoniker": "SensorSever\\ServerConnect.cs",
               "ToolTip": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\ServerConnect.cs",
               "RelativeToolTip": "SensorSever\\ServerConnect.cs",
-              "ViewState": "AgIAAJ0AAAAAAAAAAAASwKcAAAAcAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T06:15:29.5Z",
               "IsPinned": true,
@@ -51,8 +51,7 @@
               "ViewState": "AgIAAFYAAAAAAAAAAAAcwCQAAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T08:12:20.655Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
