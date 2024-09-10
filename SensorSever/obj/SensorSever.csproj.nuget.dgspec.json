@@ -53,6 +53,10 @@
               "target": "Package",
               "version": "[1.0.0.1, )"
             },
+            "System.IO": {
+              "target": "Package",
+              "version": "[4.3.0, )"
+            },
             "System.IO.Ports": {
               "target": "Package",
               "version": "[8.0.0, )"
