@@ -1,10 +1,14 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\CPRproject\\Server\\CprServer\\",
+  "WorkspaceRootPath": "E:\\tqy\\Neuedu\\CprServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|d:\\projects\\cprproject\\server\\cprserver\\sensorsever\\serverconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|e:\\tqy\\neuedu\\cprserver\\sensorsever\\serverconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|solutionrelative:sensorsever\\serverconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|e:\\tqy\\neuedu\\cprserver\\sensorsever\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|solutionrelative:sensorsever\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\4a2c823b8162ae646d5d4a046be28fd67b4977cd9fc49bbc3d7566af51eb3d68\\Socket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
@@ -26,11 +30,11 @@
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "ServerConnect.cs",
-              "DocumentMoniker": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\ServerConnect.cs",
+              "DocumentMoniker": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\ServerConnect.cs",
               "RelativeDocumentMoniker": "SensorSever\\ServerConnect.cs",
-              "ToolTip": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\ServerConnect.cs",
+              "ToolTip": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\ServerConnect.cs",
               "RelativeToolTip": "SensorSever\\ServerConnect.cs",
-              "ViewState": "AQIAALgAAAAAAAAAAAAQwLoAAAArAAAA",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T06:15:29.5Z",
               "IsPinned": true,
@@ -39,19 +43,34 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\Program.cs",
+              "RelativeDocumentMoniker": "SensorSever\\Program.cs",
+              "ToolTip": "E:\\tqy\\Neuedu\\CprServer\\SensorSever\\Program.cs",
+              "RelativeToolTip": "SensorSever\\Program.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAcwCQAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-22T08:12:20.655Z",
+              "IsPinned": true
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "Socket.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\4a2c823b8162ae646d5d4a046be28fd67b4977cd9fc49bbc3d7566af51eb3d68\\Socket.cs",
               "ToolTip": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\4a2c823b8162ae646d5d4a046be28fd67b4977cd9fc49bbc3d7566af51eb3d68\\Socket.cs [\u53EA\u8BFB]",
+              "ViewState": "AgIAAH8BAAAAAAAAAAAkwIsBAAADAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T06:59:57.128Z",
               "EditorCaption": " [\u53EA\u8BFB]"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "NetworkStream.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\1289c65372ec3ba20fd3fcc975fec5beb33e354e2a469622722dc4c54de16296\\NetworkStream.cs",
               "ToolTip": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\1289c65372ec3ba20fd3fcc975fec5beb33e354e2a469622722dc4c54de16296\\NetworkStream.cs [\u53EA\u8BFB]",
+              "ViewState": "AgIAAAUBAAAAAAAAAAAkwP0AAAAWAAAAAQAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T06:23:45.41Z",
               "EditorCaption": " [\u53EA\u8BFB]"
