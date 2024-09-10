@@ -20,12 +20,13 @@ class Pro {
         try
         {
             Pro pro = new Pro();
+            pro.Start();
             pro.serverConnect = new ServerConnect();
             pro.serverConnect.StartServer();
             // 你的主程序逻辑
             
-            pro.Start();
-           // Console.ReadLine(); // 保持程序运行
+          
+            Console.ReadLine(); // 保持程序运行
         }
         catch (Exception ex)
         {
@@ -56,23 +57,23 @@ class Pro {
         }
     }
 
-    public void OnApplicationQuit()
-    {
-        //关闭串口
-        ClosePort();
-    }
+    //public void OnApplicationQuit()
+    //{
+    //    //关闭串口
+    //    ClosePort();
+    //}
 
-    public void ClosePort()
-    {
-        try
-        {
-            sp.Close();
-        }
-        catch (Exception ex)
-        {
-            Console.WriteLine(ex.Message);
-        }
-    }
+    //public void ClosePort()
+    //{
+    //    try
+    //    {
+    //        sp.Close();
+    //    }
+    //    catch (Exception ex)
+    //    {
+    //        Console.WriteLine(ex.Message);
+    //    }
+    //}
 
 
     private void DataReceivedHandler(object sender, SerialDataReceivedEventArgs e)
@@ -88,6 +89,11 @@ class Pro {
                 { // 呼吸检测
                     Console.WriteLine("1");
                     serverConnect.SensorReceiveData("1");
+                }
+                if (index == 120)
+                { // 按压检测
+                    Console.WriteLine("2");
+                    serverConnect.SensorReceiveData("2");
                 }
             }
         }
