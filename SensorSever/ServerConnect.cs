@@ -216,11 +216,11 @@ public class ServerConnect
 
     #region 接收并处理传感器消息
 
-    private int artificialRespirationNum = 0;
-    private int pressNum = 0;
-    private int artificialRespirationAccNum = 2;
-    private int pressAccNum = 30;
-    private int round = 0;
+    //private int artificialRespirationNum = 0;
+    //private int pressNum = 0;
+    //private int artificialRespirationAccNum = 2;
+    //private int pressAccNum = 30;
+    //private int round = 0;
 
     /// <summary>
     /// 服务端接收传感器消息
@@ -233,70 +233,70 @@ public class ServerConnect
             return;
         }
 
-        if (round == 5)
-        {
-            return;
-        }
+        //if (round == 5)
+        //{
+        //    return;
+        //}
 
-        if (str == "1")
-        {
-            if (artificialRespirationNum < artificialRespirationAccNum)
-            {
-                artificialRespirationNum++;
-            }
-        }
-        else if (str == "2")
-        {
-            if (pressNum < pressAccNum)
-            {
-                pressNum++;
-            }
-        }
+        //if (str == "1")
+        //{
+        //    if (artificialRespirationNum < artificialRespirationAccNum)
+        //    {
+        //        artificialRespirationNum++;
+        //    }
+        //}
+        //else if (str == "2")
+        //{
+        //    if (pressNum < pressAccNum)
+        //    {
+        //        pressNum++;
+        //    }
+        //}
 
-        if (artificialRespirationNum == artificialRespirationAccNum && pressNum == pressAccNum)
-        {
-            round++;
-            artificialRespirationNum = 0;
-            pressNum = 0;
-            //if (round == 5)
-            //{
-            //    //5轮结束触发事件
-            //}
-        }
+        //if (artificialRespirationNum == artificialRespirationAccNum && pressNum == pressAccNum)
+        //{
+        //    round++;
+        //    artificialRespirationNum = 0;
+        //    pressNum = 0;
+        //    //if (round == 5)
+        //    //{
+        //    //    //5轮结束触发事件
+        //    //}
+        //}
         
-        Message message = new Message()
-        {
-            Code = 200,
-            Data = new MessageData()
-            {
-                Type = str,
-                ArtificialRespirationNum = artificialRespirationNum,
-                PressNum = pressNum,
-                ArtificialRespirationAccNum = artificialRespirationAccNum,
-                PressAccNum = pressAccNum,
-                Round = round,
-            }
-        };
+        //Message message = new Message()
+        //{
+        //    Code = 200,
+        //    Data = new MessageData()
+        //    {
+        //        Type = str,
+        //        ArtificialRespirationNum = artificialRespirationNum,
+        //        PressNum = pressNum,
+        //        ArtificialRespirationAccNum = artificialRespirationAccNum,
+        //        PressAccNum = pressAccNum,
+        //        Round = round,
+        //    }
+        //};
 
-        string messageStr = JsonConvert.SerializeObject(message);
-        SendResponse(messageStr);
+        //string messageStr = JsonConvert.SerializeObject(message);
+        SendResponse(str);
     }
 
-    public struct Message
-    {
-        public int Code;
-        public MessageData Data;
-    }
+    //public struct Message
+    //{
+    //    public int Code;
+    //    public MessageData Data;
+    //}
 
-    public struct MessageData
-    {
-        public string Type;
-        public int ArtificialRespirationNum;
-        public int PressNum;
-        public int ArtificialRespirationAccNum;
-        public int PressAccNum;
-        public int Round;
-    }
+    //public struct MessageData
+    //{
+    //    public string Type;
+    //    public int ArtificialRespirationNum;
+    //    public int PressNum;
+    //    public int ArtificialRespirationAccNum;
+    //    public int PressAccNum;
+    //    public int Round;
+    //}
 
     //public struct BaseMsg
     //{
