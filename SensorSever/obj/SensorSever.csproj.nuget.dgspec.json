@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj": {}
+    "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\SensorSever.csproj": {}
   },
   "projects": {
-    "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj": {
+    "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\SensorSever.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj",
+        "projectUniqueName": "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\SensorSever.csproj",
         "projectName": "SensorSever",
-        "projectPath": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\SensorSever.csproj",
+        "projectPath": "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\SensorSever.csproj",
         "packagesPath": "C:\\Users\\new\\.nuget\\packages\\",
-        "outputPath": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\obj\\",
+        "outputPath": "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\new\\AppData\\Roaming\\NuGet\\NuGet.Config",

@@ -1,13 +1,19 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Projects\\CPRproject\\Server\\CprServer\\",
+  "WorkspaceRootPath": "D:\\Projects\\serverfinal\\CprServer\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|d:\\projects\\cprproject\\server\\cprserver\\sensorsever\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\new\\AppData\\Local\\Temp\\.vsdbgsrc\\ce0036587dcf016083fac56aa60f34d83ee1aea15de8d337b76e8c6e0492b627\\TcpListener.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|d:\\projects\\serverfinal\\cprserver\\sensorsever\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|solutionrelative:sensorsever\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|d:\\projects\\cprproject\\server\\cprserver\\sensorsever\\serverconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\new\\AppData\\Local\\Temp\\.vsdbgsrc\\188d26c19fb6c08387849128c0ef1d8153bd563ffebab41977a82063f2e7e7c2\\Pro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|d:\\projects\\serverfinal\\cprserver\\sensorsever\\serverconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F140AC91-B382-48C6-BFB3-E31AD8DE225E}|SensorSever\\SensorSever.csproj|solutionrelative:sensorsever\\serverconnect.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
@@ -24,31 +30,30 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "ServerConnect.cs",
-              "DocumentMoniker": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\ServerConnect.cs",
+              "DocumentMoniker": "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\ServerConnect.cs",
               "RelativeDocumentMoniker": "SensorSever\\ServerConnect.cs",
-              "ToolTip": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\ServerConnect.cs",
+              "ToolTip": "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\ServerConnect.cs",
               "RelativeToolTip": "SensorSever\\ServerConnect.cs",
-              "ViewState": "AQIAAFAAAAAAAAAAAAAQwAAAAAAAAAAA",
+              "ViewState": "AQIAANsAAAAAAAAAAAAIwOQAAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-09-03T06:15:29.5Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\Program.cs",
+              "DocumentMoniker": "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\Program.cs",
               "RelativeDocumentMoniker": "SensorSever\\Program.cs",
-              "ToolTip": "D:\\Projects\\CPRproject\\Server\\CprServer\\SensorSever\\Program.cs",
+              "ToolTip": "D:\\Projects\\serverfinal\\CprServer\\SensorSever\\Program.cs",
               "RelativeToolTip": "SensorSever\\Program.cs",
-              "ViewState": "AQIAAAgAAAAAAAAAAADwvxMAAAALAAAA",
+              "ViewState": "AQIAAC4AAAAAAAAAAAAUwD0AAAAQAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-08-22T08:12:20.655Z",
               "IsPinned": true,
@@ -56,7 +61,29 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "TcpListener.cs",
+              "DocumentMoniker": "C:\\Users\\new\\AppData\\Local\\Temp\\.vsdbgsrc\\ce0036587dcf016083fac56aa60f34d83ee1aea15de8d337b76e8c6e0492b627\\TcpListener.cs",
+              "ToolTip": "C:\\Users\\new\\AppData\\Local\\Temp\\.vsdbgsrc\\ce0036587dcf016083fac56aa60f34d83ee1aea15de8d337b76e8c6e0492b627\\TcpListener.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAAKgAAAAAAAAAAAAQwKkAAAA+AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-29T09:51:19.756Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "Pro.cs",
+              "DocumentMoniker": "C:\\Users\\new\\AppData\\Local\\Temp\\.vsdbgsrc\\188d26c19fb6c08387849128c0ef1d8153bd563ffebab41977a82063f2e7e7c2\\Pro.cs",
+              "ToolTip": "C:\\Users\\new\\AppData\\Local\\Temp\\.vsdbgsrc\\188d26c19fb6c08387849128c0ef1d8153bd563ffebab41977a82063f2e7e7c2\\Pro.cs [\u53EA\u8BFB]",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAABkAAAAkAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-09-14T01:10:40.031Z",
+              "EditorCaption": " [\u53EA\u8BFB]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
               "Title": "Socket.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\4a2c823b8162ae646d5d4a046be28fd67b4977cd9fc49bbc3d7566af51eb3d68\\Socket.cs",
               "ToolTip": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\4a2c823b8162ae646d5d4a046be28fd67b4977cd9fc49bbc3d7566af51eb3d68\\Socket.cs [\u53EA\u8BFB]",
@@ -66,7 +93,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 5,
               "Title": "NetworkStream.cs",
               "DocumentMoniker": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\1289c65372ec3ba20fd3fcc975fec5beb33e354e2a469622722dc4c54de16296\\NetworkStream.cs",
               "ToolTip": "C:\\Users\\Admin\\AppData\\Local\\Temp\\.vsdbgsrc\\1289c65372ec3ba20fd3fcc975fec5beb33e354e2a469622722dc4c54de16296\\NetworkStream.cs [\u53EA\u8BFB]",

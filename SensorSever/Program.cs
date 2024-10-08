@@ -85,16 +85,8 @@ class Pro {
             if (strRec != null)
             {
                 int index = Convert.ToInt32(strRec.Trim());
-                if (index == 110)
-                { // 呼吸检测
-                    Console.WriteLine("1");
-                    serverConnect.SensorReceiveData("1");
-                }
-                if (index == 120)
-                { // 按压检测
-                    Console.WriteLine("2");
-                    serverConnect.SensorReceiveData("2");
-                }
+                    Console.WriteLine($"{index}");
+                    serverConnect.SensorReceiveData($"{index}");
             }
         }
         catch (Exception ex)

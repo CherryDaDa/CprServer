@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SensorSever")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dddb655d1fd8652714a9a7e5296691f8188a9a03")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9689f0825a21dbeeaee92b3fd8b917481ecf528d")]
 [assembly: System.Reflection.AssemblyProductAttribute("SensorSever")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SensorSever")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
